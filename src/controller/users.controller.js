@@ -1,4 +1,4 @@
-const { sendToQueue, receiveMessage } = require("../db/rabbitMQ.connection");
+const { sendToQueue } = require("../db/rabbitMQ.connection");
 
 // Create new user
 const createUser = async (req, res) => {
