@@ -3,7 +3,7 @@ const ampq = require("amqplib/callback_api");
 const sendToQueue = async (data, queueName) => {
   let result;
   ampq.connect(
-    process.env.NODE_ENV === "development"
+    process.env.NODE_ENV !== "production"
       ? "amqp://localhost"
       : process.env.RABBITMQ_URL,
     (err, connection) => {
